@@ -3,9 +3,16 @@ import { Briefcase, BookOpen, Code, Award, User, Globe, Star } from "lucide-reac
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-6">
-      <header className="text-center mb-10">
-        <h1 className="text-5xl font-bold text-gray-800 mb-2">Aprameya Vamshi C</h1>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-white p-6 bg-[url('https://www.transparenttextures.com/patterns/connected.png')] bg-fixed bg-repeat">
+      <header className="text-center mb-12 relative">
+        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+          <img
+            src="https://avatars.githubusercontent.com/u/99100912?v=4"
+            alt="Aprameya Vamshi C"
+            className="w-32 h-32 rounded-full border-4 border-white shadow-xl"
+          />
+        </div>
+        <h1 className="text-5xl font-extrabold text-gray-800 mt-24 mb-2">Aprameya Vamshi C</h1>
         <p className="text-lg text-gray-600">Electronics & Communication Engineer | Embedded Systems | IoT | Python Developer</p>
         <div className="mt-4 text-sm text-gray-600">
           <p>Bangalore, India | aprameyavamshic@gmail.com | +91 8277911074</p>
@@ -13,7 +20,7 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <main className="grid gap-10 max-w-5xl mx-auto">
+      <main className="grid gap-12 max-w-6xl mx-auto">
         <Section icon={<User className="w-6 h-6 text-blue-500" />} title="Summary">
           <p>
             Motivated Electronics and Communication Engineer with hands-on experience in embedded systems,
@@ -105,7 +112,7 @@ export default function Portfolio() {
 
 function Section({ title, icon, children }) {
   return (
-    <section className="bg-white shadow-md rounded-2xl p-6 border border-gray-200">
+    <section className="bg-white shadow-lg rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-center gap-2 mb-3">
         {icon}
         <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
